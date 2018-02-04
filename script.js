@@ -17,11 +17,25 @@ $(document).ready(function () {
     $('#boxDescription').val('');
 
     displayInventory();
-  });
+  }); //end inventory button listener
+//create event listener for search item
+  $('searchIn').on('click', function () {
+    //create an empty array to store matches
+    var matchesArr = [];
+    //loop through inventory array and push matched info into matches array
+      for (var i =0; i<storeData.length; i++) {
+        if (storeData[i].size == $('#boxSizeSearch').val() &&
+         storeData[i].type == $('#boxTypeSearch').val()) {
+           matchesArr.push(storeData[i]);
+         }
+       } //call the display matches array
+       displayMatches(matchesArr);
+    }); //end search listener
 
 
 
-});
+
+});//end onready function
 
 //create function to display inventory items
 function displayInventory() {
@@ -40,4 +54,20 @@ function displayInventory() {
     //append outputstring to outputs
     output.append(outputString);
   }
+}
+
+function displayMatches (arr) {
+  //create a variable to target by ID
+  var output = $('.matchesList');
+  output.empty();
+  //create conditional to test whether or not there's a match
+  if (arr.length === 0) {
+    var noMatches= '<li> no matches found </li>';
+    output.append(noMatches);
+  } else {
+  var outputMatches = '<li>' + arr[0].size + ' ';
+  outputMatches += arr[0].type + ' ';
+  outputMatches += arr[0].description;
+
+}
 }
