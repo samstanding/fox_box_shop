@@ -19,7 +19,7 @@ $(document).ready(function () {
     displayInventory();
   }); //end inventory button listener
 //create event listener for search item
-  $('searchIn').on('click', function () {
+  $('#searchIn').on('click', function () {
     //create an empty array to store matches
     var matchesArr = [];
     //loop through inventory array and push matched info into matches array
@@ -61,13 +61,15 @@ function displayMatches (arr) {
   var output = $('.matchesList');
   output.empty();
   //create conditional to test whether or not there's a match
+  for (var i =0; i<arr.length; i++) {
   if (arr.length === 0) {
     var noMatches= '<li> no matches found </li>';
     output.append(noMatches);
   } else {
-  var outputMatches = '<li>' + arr[0].size + ' ';
-  outputMatches += arr[0].type + ' ';
-  outputMatches += arr[0].description;
-
+  var outputMatches = '<li>' + arr[i].size + ' ';
+  outputMatches += arr[i].type + ' ';
+  outputMatches += arr[i].description;
+  output.append(outputMatches);
+}
 }
 }
