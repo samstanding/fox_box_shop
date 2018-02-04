@@ -51,6 +51,11 @@ then create a display matches function
 -- create outputs that display that matches on the DOM
 
 adding an item to cart
--
+- create a button with the id that is tracable
+build a function that stores cart info-- and removes it from the dom
+- would pretty much be exactly the same funciton you made to take employees off before
+-- it would also take the item off of the inventory list
+
+
 
 --add more about what will happen

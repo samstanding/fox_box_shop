@@ -1,4 +1,5 @@
 var storeData = [];
+var cartItems = [];
 
 $(document).ready(function () {
   //create event listener for my inventory button click
@@ -31,7 +32,16 @@ $(document).ready(function () {
        } //call the display matches array
        displayMatches(matchesArr);
     }); //end search listener
-
+  //create an event listener for adding an item to cart
+  $('.matchesList').on('click', '.cartIn', function() {
+    var takeItem = ($(this).data('id'));
+    //create a variable that holds the clicked on cart item
+    cartItems.push(storeData.splice(takeItem, 1));
+    console.log(cartItems);
+    //rerun the other functions to display what's left in inventory
+    displayInventory();
+    displayMatches (storeData);
+  }); //end event listener for adding something to cart
 
 
 
@@ -69,6 +79,7 @@ function displayMatches (arr) {
   var outputMatches = '<li>' + arr[i].size + ' ';
   outputMatches += arr[i].type + ' ';
   outputMatches += arr[i].description;
+  outputMatches += '<button class="cartIn" data-id="' + i + '">Add to Cart </button></li>';
   output.append(outputMatches);
 }
 }
