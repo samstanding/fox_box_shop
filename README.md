@@ -41,10 +41,16 @@ like the one for employees its going to loop through your array and output a str
 4)
 create a search
 - stub out interface-- what would a good search look like
-- insert drop downs for search- based on size and type-- use the button id for the search button to trigger event in the js
+- insert drop downs for search- based on size and type-- if a match is found then produce a list of the matching items
+ use the button id for the search button to trigger event in the js
 - capture a click
 -loop through inveotry array to find a match
 - if there is a match based on size and type: push to your matches array
 
-then create a display matches array
+then create a display matches function
+-- create outputs that display that matches on the DOM
+
+adding an item to cart
+-
+
 --add more about what will happen
