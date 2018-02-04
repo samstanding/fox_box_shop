@@ -8,16 +8,17 @@ body {
   width: 800px;
   margin: auto;
   font-family: monospace;
+  background-color: white;
 }
-ul {
+/* ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
   background-color: #333;
-}
+} */
 
-li {
+/* li {
   float: left;
 }
 
@@ -31,7 +32,7 @@ li a{
 
 li a:hover {
   background-color: #111;
-}
+} */
 #catImg {
   width: 225px;
   height: 225px;

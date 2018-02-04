@@ -2,22 +2,43 @@
 <html>
 <head>
 <title>Practice Website Practice</title>
-<script src="jquery-3.3.1.min copy.js" charset="utf-8"></script>
+<script src="jquery.js" charset="utf-8"></script>
 <script src="script.js" charset="utf-8"></script>
 <link rel="stylesheet" type="text/css" href=style.css />
 </head>
 <body>
   <div class="content">
-  <div class="nav">
+    <h1>Welcome to Fox's Shop: Your One Stop for Foxes in Boxes</h1>
+    <h3>We sell all things a sleepy cat might want</h3>
+  <!-- <div class="nav">
     <ul>
       <li><a href="default.asp">Home</a></li>
       <li><a href="news.asp">News</a></li>
       <li><a href="contact.asp">Contact</a></li>
       <li><a href="about.asp">About</a></li>
     </ul>
-    </div>
-    <h1>Welcome to Fox's Shop: Your One Stop for Foxes in Boxes</h1>
-    <h3>We sell all things a sleepy cat might want</h3>
+    </div> -->
+    <section id="inventory">
+      <h4>Put a box into our inventory!</h4>
+      <select id="boxSize">
+        <option>Tiny</option>
+          <option>Small</option>
+            <option>Medium</option>
+              <option>Big</option>
+                <option>Huge</option>
+                  <option>Spaceship</option>
+                </select>
+      <select id="boxType">
+          <option>Cardboard</option>
+            <option>Wood</option>
+              <option>Plastic</option>
+        <input id="boxDescription" type="text" placeholder="description">
+        <button id="invetoryIn">Add to Inventory</button>
+        <p>In inventory:</p>
+        <ul class="inventoryList">
+          <li>small cardboard shoebox</li>
+    </section>
+
   <p>Check out our selection of things</p>
 </div>
 </body>
