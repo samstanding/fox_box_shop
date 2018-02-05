@@ -34,12 +34,11 @@ $(document).ready(function () {
     }); //end search listener
   //create an event listener for adding an item to cart
   $('.matchesList').on('click', '.cartIn', function() {
-    var takeItem = ($(this).data('id'));
+    var takeItem = $(this).data('id');
     //create a variable that holds the clicked on cart item
     cartItems.push(storeData.splice(takeItem, 1));
     console.log(cartItems);
-    //rerun the other functions to display what's left in inventory
-    displayInventory();
+    //rerun the matches function to display what's left in inventory
     displayMatches (storeData);
   }); //end event listener for adding something to cart
 
