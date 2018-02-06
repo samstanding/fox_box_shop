@@ -41,7 +41,7 @@ $(document).ready(function () {
     //rerun the matches function to display what's left in inventory
     displayMatches (storeData);
   }); //end event listener for adding something to cart
-
+$('.matchesList').on('click', '#cartIn', displayCart(cartItems));
 
 
 });//end onready function
@@ -83,3 +83,16 @@ function displayMatches (arr) {
 }
 }
 }
+
+ displayCart ( (arr) => {
+  for (let i = 0; i<cartItems.length;i++) {
+  var output = $('#cart');
+  cart.empty();
+  let outputString = `
+  <h2>Your Cart</h2>
+  <ul class="cartClass">
+  <li>${arr[i].size, arr[i].type, arr[i].description}</li>
+  </ul>`;
+  output.append(outputString);
+  }
+})
